@@ -1,0 +1,33 @@
+<h1>User info</h1>
+
+<%= form_for @user do |f| %>
+
+<% if @user.errors.any? %>
+	<h2><%= @user.errors.count %>errors prohibited this book from being saved:</h2>
+	<ul>
+      <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<br>
+
+<%= f.label :image %>
+<%= f.attachment_field :profile_image %>
+
+<br>
+
+<%= f.label :introduction %>
+<%= f.text_area :introduction %>
+
+<br>
+
+<%= f.submit %>
+
+<% end %>
+
+
