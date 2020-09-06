@@ -29,6 +29,9 @@
             		        	<td>
             		        		<%= book.body %>
             		        	</td>
+                                <td>
+                                    <a href="#comments">コメント数：<%= book.book_comments.count %></a>
+                                </td>
             		            </tr>
             		        	<% end %>
             		        </tbody>
