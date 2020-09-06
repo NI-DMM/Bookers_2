@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @books= Book.where(user_id: current_user.id)
-  	@users = User.all
+    @users = User.all
     @book = Book.new
     @user = current_user
   end
